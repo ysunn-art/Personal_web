@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 import { CustomCursor } from '@/components/ui/CustomCursor'
+import { Navbar } from '@/components/layout/Navbar'
 import './globals.css'
 
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-family-mono' })
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={mono.variable}>
       <body>
         <CustomCursor />
+        <Navbar />
         {children}
       </body>
     </html>
