@@ -3,7 +3,7 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { TiltCard } from './TiltCard'
 import { designProjects } from '@/data/design-projects'
 
-export function RoboticGallery() {
+export function IndustrialGallery() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {designProjects.map((project, i) => (
