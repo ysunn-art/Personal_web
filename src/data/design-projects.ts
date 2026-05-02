@@ -1,5 +1,6 @@
 export interface DesignProject {
   id: string
+  slug: string
   title: string
   subtitle: string
   year: number
@@ -11,6 +12,7 @@ export interface DesignProject {
 export const designProjects: DesignProject[] = [
   {
     id: 'crane-68',
+    slug: 'crane-68',
     title: 'Crane 68',
     subtitle: 'Industrial Vehicle Design',
     year: 2025,
