@@ -18,7 +18,7 @@ export const designProjects: DesignProject[] = [
       '/images/design/crane-68-1.jpg',
       '/images/design/crane-68-2.jpg',
       '/images/design/crane-68-3.jpg',
-      '/images/design/crane-68-4.jpg',
+      '/images/design/crane-68-4.png',
     ],
     description:
       'A near-future industrial vehicle concept exploring the intersection of heavy machinery and autonomous systems. Brutalist structural forms with precision engineering details.',
