@@ -1,0 +1,7 @@
+{"ts":"2026-05-02T00:34:29.196Z","cmd":"goto","args":"https://www.easondesigns.me/blank-11","origin":"https://www.easondesigns.me/blank-11","durationMs":255,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-02T00:34:32.987Z","cmd":"screenshot","args":"/tmp/eason_design_ref.png","origin":"https://www.easondesigns.me/blank-11","durationMs":733,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-02T00:34:33.036Z","cmd":"text","args":"","origin":"https://www.easondesigns.me/blank-11","durationMs":4,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-02T00:35:02.029Z","cmd":"snapshot","args":"-i","origin":"https://www.easondesigns.me/blank-11","durationMs":27,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-02T00:35:03.137Z","cmd":"screenshot","args":"/tmp/eason_design_snap.png","origin":"https://www.easondesigns.me/blank-11","durationMs":1065,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-02T00:35:52.017Z","cmd":"goto","args":"https://www.easondesigns.me/blank-11","origin":"https://www.easondesigns.me/blank-11","durationMs":211,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-02T00:35:55.206Z","cmd":"screenshot","args":"/tmp/design1.png","origin":"https://www.easondesigns.me/blank-11","durationMs":1131,"status":"ok","hasCookies":false,"mode":"launched"}
