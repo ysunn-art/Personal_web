@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
 const LINKS = [
-  { href: '/robotic', label: 'Industrial Design' },
+  { href: '/industrial', label: 'Industrial Design' },
   { href: '/software', label: 'Software' },
-  { href: '/product', label: 'Robotic' },
+  { href: '/robotic', label: 'Robotic' },
 ]
 
 export function Navbar() {

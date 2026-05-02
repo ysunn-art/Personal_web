@@ -1,18 +1,25 @@
-import type { Metadata } from 'next'
-import { JetBrains_Mono } from 'next/font/google'
-import { CustomCursor } from '@/components/ui/CustomCursor'
-import { Navbar } from '@/components/layout/Navbar'
-import { Footer } from '@/components/layout/Footer'
-import './globals.css'
+import type { Metadata } from "next";
+import { JetBrains_Mono } from "next/font/google";
+import { CustomCursor } from "@/components/ui/CustomCursor";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import "./globals.css";
 
-const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-family-mono' })
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-family-mono",
+});
 
 export const metadata: Metadata = {
-  title: 'Eason Sun — Portfolio',
-  description: 'Robotic design · Software engineering · Product design',
-}
+  title: "Eason Sun — Portfolio",
+  description: "Robotic engineering · Software engineering · Product design",
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={mono.variable}>
       <body>
@@ -22,5 +29,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
       </body>
     </html>
-  )
+  );
 }

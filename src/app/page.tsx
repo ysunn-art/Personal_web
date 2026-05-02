@@ -5,7 +5,7 @@ import { CategoryCard } from '@/components/ui/CategoryCard'
 
 const CATEGORIES = [
   {
-    href: '/robotic',
+    href: '/industrial',
     label: 'Industrial Design',
     description: 'Industrial vehicle concepts, mechanical systems, and 3D visualization.',
     available: true,

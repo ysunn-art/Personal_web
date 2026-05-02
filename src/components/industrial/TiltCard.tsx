@@ -12,7 +12,7 @@ export function TiltCard({ project }: Props) {
   const { ref, onMouseMove, onMouseLeave } = useTilt()
 
   return (
-    <Link href={`/robotic/${project.slug}`}>
+    <Link href={`/industrial/${project.slug}`}>
       <div
         ref={ref}
         onMouseMove={onMouseMove}

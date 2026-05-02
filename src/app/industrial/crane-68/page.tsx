@@ -91,7 +91,7 @@ export default function Crane68Page() {
 
         {/* Back link */}
         <Link
-          href="/robotic"
+          href="/industrial"
           className="absolute top-24 left-8 font-mono text-[10px] text-white/50 hover:text-accent transition-colors tracking-widest uppercase"
         >
           ← Robotic
@@ -303,7 +303,7 @@ export default function Crane68Page() {
       {/* ── FOOTER NAV ── */}
       <section className="py-16 px-8 md:px-20 border-t border-border text-center">
         <Link
-          href="/robotic"
+          href="/industrial"
           className="font-mono text-xs text-muted hover:text-accent transition-colors tracking-widest uppercase"
         >
           ← Back to Industrial Design
