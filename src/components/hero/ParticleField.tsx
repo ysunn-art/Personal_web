@@ -28,7 +28,7 @@ export function ParticleField() {
         p.y = (p.y + p.vy + h) % h
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(57,255,20,${p.a})`
+        ctx.fillStyle = `rgba(107,143,163,${p.a})`
         ctx.fill()
       })
       for (let i = 0; i < pts.length; i++) {
@@ -38,7 +38,7 @@ export function ParticleField() {
           const d = Math.sqrt(dx * dx + dy * dy)
           if (d < 110) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(57,255,20,${0.04 * (1 - d / 110)})`
+            ctx.strokeStyle = `rgba(107,143,163,${0.08 * (1 - d / 110)})`
             ctx.lineWidth = 0.5
             ctx.moveTo(pts[i].x, pts[i].y)
             ctx.lineTo(pts[j].x, pts[j].y)

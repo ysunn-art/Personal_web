@@ -2,14 +2,14 @@
 import { motion } from 'framer-motion'
 
 const STEPS = [
-  { label: 'Onboard SME', color: '#39ff14' },
-  { label: 'Interview', color: '#a8ff82' },
-  { label: 'Materials', color: '#39ff14' },
-  { label: 'Synthesize', color: '#a8ff82' },
-  { label: 'Review', color: '#39ff14' },
-  { label: 'Approve', color: '#a8ff82' },
-  { label: 'Knowledge DB', color: '#39ff14' },
-  { label: 'Q&A / Route', color: '#ff6b35' },
+  { label: 'Onboard SME', color: '#6b8fa3' },
+  { label: 'Interview', color: '#8aaab8' },
+  { label: 'Materials', color: '#6b8fa3' },
+  { label: 'Synthesize', color: '#8aaab8' },
+  { label: 'Review', color: '#6b8fa3' },
+  { label: 'Approve', color: '#8aaab8' },
+  { label: 'Knowledge DB', color: '#6b8fa3' },
+  { label: 'Q&A / Route', color: '#b07050' },
 ]
 
 export function ArchFlow() {
@@ -27,7 +27,7 @@ export function ArchFlow() {
             >
               <div
                 className="w-2.5 h-2.5 rounded-full mb-2"
-                style={{ backgroundColor: step.color, boxShadow: `0 0 6px ${step.color}` }}
+                style={{ backgroundColor: step.color, boxShadow: `0 0 6px ${step.color}40` }}
               />
               <span className="font-mono text-[9px] text-muted whitespace-nowrap px-2">
                 {step.label}

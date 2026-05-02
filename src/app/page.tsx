@@ -36,7 +36,7 @@ export default function LandingPage() {
           className="absolute inset-0 pointer-events-none opacity-[0.04]"
           style={{
             backgroundImage:
-              'linear-gradient(#39ff14 1px, transparent 1px), linear-gradient(90deg, #39ff14 1px, transparent 1px)',
+              'linear-gradient(#6b8fa3 1px, transparent 1px), linear-gradient(90deg, #6b8fa3 1px, transparent 1px)',
             backgroundSize: '60px 60px',
           }}
         />
