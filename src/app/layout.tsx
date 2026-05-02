@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
+const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-family-mono' })
 
 export const metadata: Metadata = {
   title: 'Eason Sun — Portfolio',
