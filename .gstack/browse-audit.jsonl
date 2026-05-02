@@ -13,3 +13,5 @@
 {"ts":"2026-05-02T03:45:19.096Z","cmd":"screenshot","args":"/tmp/crane68_ref3.png","origin":"https://www.easondesigns.me/blank-11","durationMs":1006,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-05-02T03:45:19.143Z","cmd":"scroll","args":"","origin":"https://www.easondesigns.me/blank-11","durationMs":0,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-05-02T03:45:21.245Z","cmd":"screenshot","args":"/tmp/crane68_ref4.png","origin":"https://www.easondesigns.me/blank-11","durationMs":1020,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-02T04:22:48.097Z","cmd":"goto","args":"https://ysunn-portfolio.vercel.app/","origin":"https://ysunn-portfolio.vercel.app/","durationMs":440,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-02T04:22:50.258Z","cmd":"screenshot","args":"/tmp/vercel_live.png","origin":"https://ysunn-portfolio.vercel.app/","durationMs":95,"status":"ok","hasCookies":false,"mode":"launched"}

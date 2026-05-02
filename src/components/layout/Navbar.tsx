@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
 const LINKS = [
-  { href: '/robotic', label: 'Robotic' },
+  { href: '/robotic', label: 'Industrial Design' },
   { href: '/software', label: 'Software' },
   { href: '/product', label: 'Product' },
 ]
@@ -17,7 +17,7 @@ export function Navbar() {
   return (
     <>
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 border-b border-border/50 backdrop-blur-md bg-black/70"
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 border-b border-border/40 bg-bg/80 backdrop-blur-sm"
         initial={{ y: -70 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -38,7 +38,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`relative font-mono text-xs tracking-wider uppercase transition-colors ${
-                  active ? 'text-accent' : 'text-muted hover:text-white'
+                  active ? 'text-accent' : 'text-muted hover:text-text'
                 }`}
               >
                 {link.label}

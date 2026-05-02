@@ -31,7 +31,7 @@ export function CategoryCard({ href, label, description, index, available = true
           {String(index + 1).padStart(2, '0')}
         </span>
 
-        <h2 className="font-mono text-2xl font-bold tracking-tight text-white mb-3 group-hover:text-accent transition-colors">
+        <h2 className="font-mono text-4xl md:text-5xl font-bold tracking-tighter text-text mb-3 group-hover:text-accent transition-colors">
           {label}
         </h2>
 
