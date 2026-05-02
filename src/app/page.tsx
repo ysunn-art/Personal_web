@@ -18,8 +18,8 @@ const CATEGORIES = [
   },
   {
     href: '/product',
-    label: 'Product',
-    description: 'Consumer product design and user experience work.',
+    label: 'Robotic',
+    description: 'Robotics, automation systems, and engineering projects.',
     available: false,
   },
 ]

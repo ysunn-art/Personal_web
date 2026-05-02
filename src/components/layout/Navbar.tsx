@@ -7,7 +7,7 @@ import { useState } from 'react'
 const LINKS = [
   { href: '/robotic', label: 'Industrial Design' },
   { href: '/software', label: 'Software' },
-  { href: '/product', label: 'Product' },
+  { href: '/product', label: 'Robotic' },
 ]
 
 export function Navbar() {
