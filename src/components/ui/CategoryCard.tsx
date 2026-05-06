@@ -17,10 +17,11 @@ export function CategoryCard({ href, label, description, index, available = true
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 + index * 0.15, duration: 0.6, ease: [0.21, 0.45, 0.15, 1] }}
       data-cursor-hover
+      className="h-full"
     >
       <Link
         href={available ? href : '#'}
-        className={`group relative block border border-border p-8 transition-all duration-300 ${
+        className={`group relative flex flex-col h-full border border-border p-8 transition-all duration-300 ${
           available
             ? 'hover:border-accent/50 hover:bg-surface'
             : 'opacity-40 pointer-events-none'

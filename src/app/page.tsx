@@ -72,23 +72,30 @@ export default function LandingPage() {
         </div>
 
         {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        <motion.a
+          href="#categories"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
+          onClick={(e: React.MouseEvent) => {
+            e.preventDefault()
+            document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' })
+          }}
         >
-          <span className="font-mono text-[9px] text-muted tracking-[0.4em] uppercase">Select</span>
+          <span className="font-mono text-[9px] text-muted tracking-[0.4em] uppercase group-hover:text-accent transition-colors">
+            Select
+          </span>
           <motion.div
-            className="w-px h-10 bg-gradient-to-b from-accent to-transparent"
+            className="w-px h-10 bg-gradient-to-b from-accent to-transparent group-hover:h-14 transition-all"
             animate={{ scaleY: [1, 0.5, 1] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
           />
-        </motion.div>
+        </motion.a>
       </section>
 
       {/* Category cards */}
-      <section className="max-w-4xl mx-auto w-full px-8 pb-32 pt-0 -mt-12 relative z-10">
+      <section id="categories" className="max-w-4xl mx-auto w-full px-8 pb-32 pt-0 -mt-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {CATEGORIES.map((cat, i) => (
             <CategoryCard key={cat.href} {...cat} index={i} />
