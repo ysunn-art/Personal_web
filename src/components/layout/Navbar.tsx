@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
 const LINKS = [
+  { href: '/about', label: 'About Me' },
   { href: '/industrial', label: 'Industrial Design' },
   { href: '/software', label: 'Software' },
   { href: '/robotic', label: 'Robotic' },
