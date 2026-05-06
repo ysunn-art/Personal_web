@@ -18,7 +18,7 @@ export function HeroShot() {
         src="/images/about-me/heroshot.jpg"
         alt="Eason"
         fill
-        className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+        className="object-cover transition-all duration-500"
         sizes="(max-width: 768px) 100vw, 300px"
         priority
       />

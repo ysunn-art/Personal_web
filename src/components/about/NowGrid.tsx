@@ -8,19 +8,9 @@ const NOW_ITEMS = [
     desc: 'VLA model ("Rosetta") on top of a classical ROS2 control pipeline. Currently weighing Forward Command vs. Joint Trajectory controllers.',
   },
   {
-    tag: 'shipping',
-    title: 'Mobile @ Amazon',
-    desc: 'Spinning up on Kotlin / Android for the One Medical app. Pivoted from Swift after scoping the actual work.',
-  },
-  {
     tag: 'thinking',
     title: 'Power & responsibility',
     desc: 'Reading on technology and power for TECHIN 522. Trying to keep the ethics work as rigorous as the technical work.',
-  },
-  {
-    tag: 'playing',
-    title: 'Slay the Spire',
-    desc: 'Silent main, currently obsessed with poison + ability-trigger builds. Same energy as debugging a controller, honestly.',
   },
 ]
 
@@ -36,9 +26,7 @@ export function NowGrid() {
           <motion.div
             key={item.tag}
             className={`group/now p-6 border-border ${
-              i % 2 === 0 ? 'md:border-r' : ''
-            } ${i < 2 ? 'border-b' : ''} ${
-              i === 0 ? 'border-b md:border-r' : ''
+              i % 2 === 0 && NOW_ITEMS.length > 1 ? 'md:border-r' : ''
             } hover:bg-accent-dim transition-colors duration-200`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 .gstack/
 .env*.local
+about_me_photos/
+industrial_design_files/

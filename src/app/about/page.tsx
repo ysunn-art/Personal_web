@@ -6,6 +6,24 @@ import { IDCard } from '@/components/about/IDCard'
 import { NowGrid } from '@/components/about/NowGrid'
 import { StackGrid } from '@/components/about/StackGrid'
 
+const HOBBIES = [
+  {
+    name: 'Gaming',
+    desc: 'Roguelikes, strategy, and anything with good systems design. Slay the Spire, Balatro, Factorio.',
+    accent: '#d6451f',
+  },
+  {
+    name: 'Snooker',
+    desc: 'Precision, patience, and geometry. A good frame is like debugging — one shot at a time.',
+    accent: '#2d8b57',
+  },
+  {
+    name: 'Snowboarding',
+    desc: 'Stevens Pass regular. Nothing clears the head like a cold run down a blue slope.',
+    accent: '#4a90d9',
+  },
+]
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen pt-24 pb-32">
@@ -83,32 +101,17 @@ export default function AboutPage() {
               <span className="text-accent">01 /</span> what i&apos;m doing
             </span>
             <h2 className="font-mono text-2xl font-bold tracking-tight italic">
-              between a research lab and a product team
+              software & robotics development
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8">
-            <div className="font-mono text-[10px] text-muted tracking-[0.12em] uppercase leading-loose">
-              Coursework
-              <br />
-              ──────
-              <br />
-              TECHIN 510
-              <br />
-              TECHIN 517
-              <br />
-              TECHIN 522
-              <br />
-              User Research
-            </div>
-            <div className="space-y-4">
-              <p className="font-mono text-sm text-text leading-relaxed max-w-[64ch]">
-                At GIX my work spans robotics (TECHIN 517), responsible innovation and ethics (TECHIN 522), user research, and product/UX-adjacent systems (TECHIN 510). It&apos;s a weird and good mix — one week I&apos;m comparing controller architectures, the next I&apos;m running a structured user interview or writing a consulting deck on a fictional wellness platform.
-              </p>
-              <p className="font-mono text-sm text-muted leading-relaxed max-w-[64ch]">
-                This summer I&apos;ll be at <strong className="text-text">Amazon</strong> as an SDE intern on the <strong className="text-text">One Medical Mobile</strong> team, working in Kotlin on Android. I find the jump from ROS2 publishers to Kotlin Flow surprisingly natural — they&apos;re both just opinionated takes on async streams.
-              </p>
-            </div>
+          <div className="max-w-[64ch] space-y-4">
+            <p className="font-mono text-sm text-text leading-relaxed">
+              I build across the full stack — from low-level ROS2 control pipelines and VLA models for robot manipulation, to full-stack AI systems and web applications. My work sits at the intersection of hardware and software, where clean abstractions meet real-world constraints.
+            </p>
+            <p className="font-mono text-sm text-muted leading-relaxed">
+              Currently at GIX, my focus spans robotics engineering, responsible AI, and product design. One week I&apos;m comparing controller architectures for a bi-manual arm setup, the next I&apos;m shipping a full-stack knowledge management system for a hackathon.
+            </p>
           </div>
         </AnimatedSection>
 
@@ -174,6 +177,41 @@ export default function AboutPage() {
                 Most of what I find interesting lives at a seam: control theory meets ML, ROS2 meets mobile, ethics meets shipping. I try to stay fluent on both sides of whichever seam I&apos;m on.
               </p>
             </div>
+          </div>
+        </AnimatedSection>
+
+        {/* SECTION 05 — Hobbies */}
+        <AnimatedSection className="mb-20">
+          <div className="flex items-baseline gap-8 border-b border-border pb-3 mb-8">
+            <span className="font-mono text-[11px] text-muted tracking-[0.15em] uppercase shrink-0">
+              <span className="text-accent">05 /</span> off the clock
+            </span>
+            <h2 className="font-mono text-2xl font-bold tracking-tight italic">
+              what I do when I&apos;m not building
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {HOBBIES.map((hobby, i) => (
+              <motion.div
+                key={hobby.name}
+                className="group/hobby border border-border bg-surface p-6 hover:border-accent/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 + i * 0.1, duration: 0.5 }}
+                data-cursor-hover
+              >
+                <div
+                  className="w-3 h-3 rounded-full mb-4"
+                  style={{ backgroundColor: hobby.accent }}
+                />
+                <h3 className="font-mono text-lg font-bold text-text mb-2 group-hover/hobby:text-accent transition-colors">
+                  {hobby.name}
+                </h3>
+                <p className="font-mono text-xs text-muted leading-relaxed">{hobby.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </AnimatedSection>
 
