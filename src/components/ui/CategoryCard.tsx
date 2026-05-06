@@ -8,9 +8,11 @@ interface CategoryCardProps {
   description: string
   index: number
   available?: boolean
+  onMouseEnter?: () => void
+  onMouseLeave?: () => void
 }
 
-export function CategoryCard({ href, label, description, index, available = true }: CategoryCardProps) {
+export function CategoryCard({ href, label, description, index, available = true, onMouseEnter, onMouseLeave }: CategoryCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -18,6 +20,8 @@ export function CategoryCard({ href, label, description, index, available = true
       transition={{ delay: 1 + index * 0.15, duration: 0.6, ease: [0.21, 0.45, 0.15, 1] }}
       data-cursor-hover
       className="h-full"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <Link
         href={available ? href : '#'}

@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ParticleField } from '@/components/hero/ParticleField'
 import { CategoryCard } from '@/components/ui/CategoryCard'
@@ -24,7 +25,11 @@ const CATEGORIES = [
   },
 ]
 
+const COLUMN_POSITIONS = ['16.667%', '50%', '83.333%']
+
 export default function LandingPage() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(1)
+
   return (
     <main className="relative min-h-screen flex flex-col">
       {/* Hero */}
@@ -70,35 +75,45 @@ export default function LandingPage() {
             Design · Engineering · Innovation
           </motion.p>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.a
-          href="#categories"
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group cursor-pointer"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          onClick={(e: React.MouseEvent) => {
-            e.preventDefault()
-            document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' })
-          }}
-        >
-          <span className="font-mono text-[9px] text-muted tracking-[0.4em] uppercase group-hover:text-accent transition-colors">
-            Select
-          </span>
-          <motion.div
-            className="w-px h-10 bg-gradient-to-b from-accent to-transparent group-hover:h-14 transition-all"
-            animate={{ scaleY: [1, 0.5, 1] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          />
-        </motion.a>
       </section>
 
       {/* Category cards */}
       <section id="categories" className="max-w-4xl mx-auto w-full px-8 pb-32 pt-0 -mt-12 relative z-10">
+        {/* Select indicator */}
+        <div className="relative h-20 mb-4 hidden md:block">
+          <motion.div
+            className="absolute flex flex-col items-center gap-2"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              left: COLUMN_POSITIONS[hoveredIndex ?? 1],
+            }}
+            transition={{
+              opacity: { delay: 1.2, duration: 0.6 },
+              left: { type: 'spring', stiffness: 300, damping: 30 },
+            }}
+            style={{ x: '-50%' }}
+          >
+            <span className="font-mono text-[9px] text-muted tracking-[0.4em] uppercase">
+              Select
+            </span>
+            <motion.div
+              className="w-px h-10 bg-gradient-to-b from-accent to-transparent"
+              animate={{ scaleY: [1, 0.5, 1] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            />
+          </motion.div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {CATEGORIES.map((cat, i) => (
-            <CategoryCard key={cat.href} {...cat} index={i} />
+            <CategoryCard
+              key={cat.href}
+              {...cat}
+              index={i}
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(1)}
+            />
           ))}
         </div>
       </section>
