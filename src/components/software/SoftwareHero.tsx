@@ -18,7 +18,7 @@ export function SoftwareHero() {
           capturing expertise through structured interviews, synthesizing it via Claude Sonnet 4.5,
           and answering questions with full RAG grounding and attribution.
         </p>
-        <GlowButton href="https://github.com/easons1c" variant="outline">
+        <GlowButton href="https://github.com/ysunn-art/Thoth" variant="outline">
           View on GitHub ↗
         </GlowButton>
       </AnimatedSection>

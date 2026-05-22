@@ -1,29 +1,28 @@
-import { SoftwareHero } from '@/components/software/SoftwareHero'
-import { CapabilityGrid } from '@/components/software/CapabilityGrid'
-import { ArchFlow } from '@/components/software/ArchFlow'
-import { TechPills } from '@/components/software/TechPills'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
+import { SoftwareGallery } from '@/components/software/SoftwareGallery'
 
 export default function SoftwarePage() {
   return (
     <main className="min-h-screen pt-32 pb-32 px-8 max-w-6xl mx-auto">
-      <SoftwareHero />
+      {/* Category hero */}
+      <div className="mb-20">
+        <AnimatedSection>
+          <p className="font-mono text-accent text-[10px] tracking-[0.5em] uppercase mb-5">
+            Software · AI Engineering
+          </p>
+          <h1 className="font-mono text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-none">
+            Systems
+            <br />
+            <span className="text-muted">&amp; Software</span>
+          </h1>
+          <p className="font-mono text-xs text-muted max-w-lg leading-relaxed">
+            AI-powered applications, backend systems, and data pipelines. From hackathon prototypes to
+            production-grade architectures — built with FastAPI, LLMs, and vector search.
+          </p>
+        </AnimatedSection>
+      </div>
 
-      <AnimatedSection className="mb-16 p-6 border border-border bg-surface">
-        <p className="font-mono text-[10px] text-muted tracking-widest uppercase mb-4">
-          System Pipeline
-        </p>
-        <ArchFlow />
-      </AnimatedSection>
-
-      <AnimatedSection className="mb-16">
-        <CapabilityGrid />
-      </AnimatedSection>
-
-      <AnimatedSection>
-        <p className="font-mono text-[10px] text-muted tracking-widest uppercase mb-6">Tech Stack</p>
-        <TechPills />
-      </AnimatedSection>
+      <SoftwareGallery />
     </main>
   )
 }
